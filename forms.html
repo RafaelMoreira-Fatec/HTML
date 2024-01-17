@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        code {
+            background-color: blanchedalmond;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML forms: 
+        <a href="https://web.dev/learn/forms/form-element?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fforms%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fforms%2Fform-element">Fonte</a></h1>
+    <h2>O que é elemento de formulario?</h2>
+    <p>O elemento form é a tag form que tem a tag de abertura e fechamento chamada 'form'</p>
+    <p>Entre o inicio e o final da tag podemos incluir outros elementos que servem para os usuarios entrarem com
+        informações</p>
+    <p>Exemplo:</p>
+    <form>
+        <label for="animal">What is your favorite animal?</label>
+        <input type="text" id="animal" name="animal">
+        <button>Save</button>
+    </form>
+    <hr>
+    <h2>Onde os dados são processados?</h2>
+    <p>Quando um dado é enviado(quando o usuario clica no botão de enviar) por exemplo, o navegador faz uma requisição e
+        um script pode responder a essa requisição e processar os dados </p>
+
+    <hr>
+    <h2>Como os dados são transferidos?</h2>
+    <!-- By default, form data is sent as a GET request, with the submitted data appended to the URL.
+         If a user submits 'frog' in the example above, the browser makes a request to the following URL: -->
+    <p>Por padrão, os dados do formulario são enviados com uma requisição get, com os dados enviados anexados na URL</p>
+    <p>se enviarmos 'frog' no exemplo acima, o navegador fará uma requisição com a seguinte URL</p>
+    <p><em>//example.com/animals?animal=frog</em></p>
+    <p>neste caso, podemos acessar os dados com o backend ou com o frontend </p>
+    <p>se quisermos, podemos instruir com que o formulario use o methodo post</p>
+    <code>
+    &lt;form method="post"&gt; <br>
+    ...<br>
+    &lt;/form&gt;<br>
+    </code>
+    <p>desta forma, os dados irão no corpo da requisição</p>
+<hr>
+<h2>Qual método usar?</h2>
+<p>Para dados sensiveis usa-se o post, pois os dados serão criptografados(se estivermos usando o método HTTPS)
+    e só será acessivel pelo script backend que processara a requisição
+</p>
+</body>
+
+</html>
